@@ -1,0 +1,30 @@
+/* Define el estilo a las celdas */
+/*.texto_descripcion {
+	background-color: #DCA8A8;
+}*/
+
+.linea{
+	background-color: #B2B4BF;
+}
+
+td	{
+	padding:	0.01mm;
+	border: solid 0.01mm black;
+	/*text-align:	center;*/
+	width: 5mm;
+	height: 3mm; 
+}
+
+
+th	{
+	padding:	0.01mm;
+	border: solid 0.01mm black;
+	/*text-align:	center;*/
+	width: 5mm;
+	height: 3mm; 
+}
+
+table 	{
+	width:	90%;
+	font-size: 10px;
+	}

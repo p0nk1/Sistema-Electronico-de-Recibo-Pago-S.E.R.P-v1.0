@@ -1,0 +1,147 @@
+.celdas-rojas {
+	background-color:#22618c;
+	color:#000000;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding-bottom:2px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:2px}
+
+.celdas-amarillas{
+	background-color:#FFFFCC;
+	color:#666666;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding-bottom:2px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:2px}
+
+.celdas-azules {
+	background-color:#dae9f3;
+	color:#000000;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding-bottom:2px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:2px}
+
+.celdas-blancas{
+	background-color:#FFFFFF;
+	color:#000000;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding: 2px;
+}
+.celdas-grises{
+	background-color:#eeeeee;
+	color:#666666;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding-bottom:2px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:2px}
+
+.celdas-verdes{
+	background-color:#DAF3DB;
+	color:#666666;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding-bottom:2px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:2px}
+
+.fondo-tabla{
+	border:none;
+	background-color: #CCCCCC;
+	text-indent: 2pt;}
+.titulo-celda {
+	background-color:#005B88;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+.titulo-celdanew-rojo {
+	background-color:#FE2E2E;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+.titulo-celdanew {
+	background-color:#387C2B;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+.titulo-celdasub {
+	background-color:#AF0000;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+
+.titulo-celunes-roja {
+	background-color:#006fba;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:14px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+
+.titulo-celunes {
+	background-color:#387C2B;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:14px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+.bordeazul{
+	background-color:#dae9f3;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.pie-celunes-rojo {
+	background-color:#22618c;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:10px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
+
+.pie-celunes {
+	background-color:#387C2B;
+	color:#FFFFFF;
+	font-family:Tahoma, Verdana, Arial;
+	font-size:10px;
+	font-weight:bold;
+	text-align: center;
+	border: thin none #CCCCCC;
+}
