@@ -27,11 +27,11 @@
 $cedula_rp=$_SESSION['cedula_rp'];
 $la_logusr=$_SESSION['la_logusr'];
 $bienvenido=$_SESSION['bienvenido'];
-$anocurso=$_POST["anocurso"];
+$anocurso=$_REQUEST["anocurso"];
 //print_r($_POST);
 include '../database.php';
 
-$ls_operacion=$_POST["operacion"];//echo $ls_operacion;
+$ls_operacion=$_REQUEST["operacion"]; //echo $ls_operacion;
 
 if($ls_operacion=="CAMBIO_BD")
 {
@@ -100,13 +100,15 @@ if($ls_operacion=="CAMBIO_BD")
 	if($anocurso=="2019")
 
 	{
-		$conn = pg_connect("user=".DB_USER." password=".DB_PASS." port=".DB_PORT." dbname=".DB_NAME." host=".DB_HOST);
+		$conn = pg_connect("user=".DB_USER." password=".DB_PASS." port=".DB_PORT." dbname=".DB_NAME5." host=".DB_HOST);
 
 		$sql = "SELECT a.codnom,a.codper,b.nomper,b.apeper,c.desnom
 		FROM sno_personalnomina a,sno_personal b, sno_thnomina c where b.cedper='$cedula_rp' and a.codper=b.codper and c.codnom=a.codnom order by a.codnom ASC";
 
 
-      $sql = pg_query($conn, $sql);
+	  $sql = pg_query($conn, $sql);
+	 
+
 	}
 
 }
@@ -133,7 +135,7 @@ else
 			$filas = pg_num_rows($r);
 			for ($i = 1; $i <= $filas; $i++)
 				$arr[] = pg_fetch_array($r, NULL,  PGSQL_ASSOC);
-				/*echo $arr;*/
+				//echo $arr;
 
 		}else
 			echo "error consulta";
@@ -152,7 +154,7 @@ else
 		    {
 			if  (($codper_rp=="") or ($codper_rp==NULL) or (empty($codper_rp)))
 			    {
-				echo '<script language="JavaScript">alert("La c�dula registrada no corresponde con alg�n personal!");</script>';
+				echo '<script language="JavaScript">alert("La cédula registrada no corresponde con algún personal!");</script>';
 				echo "<meta http-equiv='refresh' content='0;URL=../index.php'/>";
 		            }
 		        else
@@ -244,7 +246,7 @@ a:active {
 </style>
 
 </head>
-<body background="../img/">
+<body background="../img/fondo.jpg">
 <!--<table width="762" border="0" align="center" cellpadding="0" cellspacing="0" class="contorno">
   <tr>
     <td width="780" height="30" colspan="11" class="cd-logo"><img align="center" src="../img/banner_gmsyt.jpg" width="770" height="130"></td>
@@ -261,7 +263,7 @@ a:active {
 <div class="container">
   <div class="row mb-5">
   <div class="col-md-12">
-    <img src="../img/banner_gmsyt.gif" style="width:100%; height:150px;">
+    <img src="../img/logo_gmsyt.png" style="width:160px; height:150px;">
   </div>
 </div>
 
@@ -412,7 +414,7 @@ a:active {
     <!--</div></td>
   </tr>--> <?php } ?>
         <!--<tr>
-          <td height="20" colspan="4" class="titulo-celunes">Intervalo de Personal </td>
+          <td height="20" colspan="4" class="titulo-celunes">Intervalo de Personal </td>ue_print()
           </tr>-->
         <!--<tr>
           <td width="133" height="22"><div align="right">  </div></td>
