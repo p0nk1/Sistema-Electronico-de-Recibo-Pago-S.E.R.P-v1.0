@@ -5,7 +5,7 @@ if(isset($_POST['acceder']))
 {
 
 //include 'database.php';
-$conn = pg_connect("host=192.168.0.90 dbname=db_saberytrabajo_2018 port=5432 user=sametsis password=+s4b1dur14+");
+$conn = pg_connect("host=192.168.0.90 dbname=db_saberytrabajo_2019 port=5432 user=sametsis password=+s4b1dur14+");
 //echo $conn;
 if($conn)
     {
@@ -21,14 +21,15 @@ if($conn)
 			{
 			    $_SESSION['cedula_rp']=$row['cedula'];
 			    $_SESSION['usuario_rp']=$row['usuario'];
-			    $_SESSION['bienvenido']=1;
-				echo "<meta http-equiv='refresh' content='0;URL=sno/sigesp_snorh_r_recibopago.php'/>"; //?cedula_rp=$cedula_rp
+          $_SESSION['bienvenido']=1;
+          header("location:sno/sigesp_snorh_r_recibopago.php?operacion=CAMBIO_BD&anocurso=2019");
+				//echo "<meta http-equiv='refresh' content='0;URL=sno/sigesp_snorh_r_recibopago.php?operacion=CAMBIO_BD&anocurso=2019/>"; //?cedula_rp=$cedula_rp
 				//echo "<script>alert(\"Bienvenido, usuario ".$_SESSION['usuario_rp']."\");</script>";
 			 }
 			 else
  			 {
 
-			    echo "<script>alert(\"El nombre de usuario o la contrase�a son incorrectos\");</script>";
+			    echo "<script>alert(\"El nombre de usuario o la contraseña son incorrectos\");</script>";
 			 }
     }
 }
@@ -75,7 +76,7 @@ else
 }
 </style>
 </head>
-<body  background="img/" link="#006699" vlink="#006699" alink="#006699">
+<body  background="img/fondo.jpg" link="#006699" vlink="#006699" alink="#006699">
 <a name="top"></a>
 <!--1<table width="770" border="0" align="center" cellpadding="0" cellspacing="0" class="contorno">1-->
   <!--<tr>
@@ -104,7 +105,7 @@ else
 <div class="container">
   <div class="row mb-5">
   <div class="col-md-12">
-    <img src="img/banner_gmsyt.gif" style="width:100%; height:150px;">
+    <img src="img/logo_gmsyt.png" style="width:160px; height:150px;">
   </div>
 </div>
 
@@ -159,6 +160,8 @@ else
 <input name="contrasena" class="form-control" type="password"/>
 </div>
 </div>
+<input name="operacion" class="form-control" type="hidden" value="CAMBIO_BD"/>
+<input name="anocurso" class="form-control" type="hidden" value="2019"/>
 <!--10</td>
 			  </tr>
               <tr>
@@ -166,7 +169,7 @@ else
                 <td colspan="3" align="center">10-->
 <div class="form-group row" style="text-align:center;">
 <input type="submit" name="acceder" class="btn bg-primary col-12 text-white mb-2" value="Entrar" />
-<a href="registro_usuarios.php" class="col-12">Registrar Usuario</a>
+<!--<a href="registro_usuarios.php" class="col-12">Registrar Usuario</a>-->
 <a href="recuperar_contrasena.php" class="col-12">¿Olvido su Contraseña?</a>
 </div>
                 <!--11</td>

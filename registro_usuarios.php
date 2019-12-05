@@ -19,7 +19,7 @@ switch ($_POST['operacion'])
 case "GUARDAR":
 
 //include 'database.php';
-$conn = pg_connect("host=192.168.0.90 dbname=db_saberytrabajo_2018 port=5432 user=sametsis password=+s4b1dur14+");
+$conn = pg_connect("host=192.168.0.90 dbname=db_saberytrabajo_2019 port=5432 user=sametsis password=+s4b1dur14+");
 
 
       $sql = "SELECT cedper FROM sno_personal where cedper='$ls_cedula'";
@@ -73,7 +73,7 @@ $conn = pg_connect("host=192.168.0.90 dbname=db_saberytrabajo_2018 port=5432 use
 		             $ls_respuesta= md5($ls_respuesta);
 
 		             $sql = "INSERT INTO sss_usuarios_rp (cedula, usuario, contrasena, pregunta, respuesta) VALUES ('$ls_cedula','$ls_usuario', '$ls_contrasena','$ls_pregunta','$ls_respuesta')";
-		             $sql = pg_query($conn, $sql);
+		             $sql = pg_query($conn, $sql) or die("Imposible registrar en BD..."." ".pg_last_error());
 
 		             echo '<script language="JavaScript">alert("El Usuario ha sido registrado correctamente!");</script>';
 		             echo "<meta http-equiv='refresh' content='0;URL=index.php'/>";
@@ -149,7 +149,7 @@ break;
 }
 </style>
 </head>
-<body background="img/" link="#006699" vlink="#006699" alink="#006699">
+<body background="img/fondo.jpg" link="#006699" vlink="#006699" alink="#006699">
 <a name="top"></a>
 <!--1<table width="770" border="0" align="center" cellpadding="0" cellspacing="0" class="contorno">1-->
   <!--<tr>
@@ -176,7 +176,7 @@ break;
 <div class="container">
 <div class="row mb-5">
 <div class="col-md-12">
-  <img src="img/banner_gmsyt.gif" style="width:100%; height:150px;">
+  <img src="img/logo_gmsyt.png" style="width:150px; height:160px;">
 </div>
 </div>
 <!--<p>&nbsp;</p>-->
